@@ -1,0 +1,3 @@
+config demo helloworld 
+	option name 'You'
+	option greeting 'Hello'
