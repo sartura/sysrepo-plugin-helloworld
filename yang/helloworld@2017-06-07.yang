@@ -1,0 +1,43 @@
+module helloworld {
+
+    yang-version 1;
+
+    namespace
+      "urn:ietf:params:xml:ns:yang:wifi-demo";
+
+    prefix wifi-demo;
+
+    organization
+      "Sysrepo";
+
+    contact
+      "Project repository <https://github.com/sysrepo/sysrepo";
+
+    description
+      "Model used for demo purpose of manipulating OpenWrt UCI configuration with Sysrepo.";
+
+    revision "2017-06-07" {
+      description "Initial revision.";
+      reference
+        "No";
+    }
+
+    container world {
+            leaf name {
+                type string;
+                description
+                  "Name of greeted participant";
+            }
+
+            leaf greeting {
+                type string;
+                description
+                  "Greeting phrase";
+            }
+    }
+
+  rpc greet {
+    description
+      "Commence greeting.";
+  }
+}
